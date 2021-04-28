@@ -17,4 +17,7 @@ TECH1015-CW2 Submission
 ---
 
 **.**:
+
+I will be beginning with what I believe to be the "standard" html set-up, an index.html page to act as a landing page for anyone visiting the site, for this case I will just be using this one page for my site and use JavaScript to give the illusion of different webpages, this should (hopefully) remove loading inbetween browsing on the site, with the majority of content being downloaded in advance (permitting that it is not a rediculous amount of data, so automatic videos or animated backgrounds are probably worth avoiding if not scaled accordingly).
+
 ------------

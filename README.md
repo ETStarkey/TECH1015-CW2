@@ -22,6 +22,9 @@ I will be beginning with what I believe to be the "standard" html set-up, an ind
 
 ![Standard HTML Setup](./img/readme-img/standardHTMLSetup.png)
 
+
 I want this site to be reflective of myself, the work I produce, and ideally a general aesthetic that isn't oversaturated with animated images or backgrounds that take away from the contents of the portfolio, but instead can compliment and highlight the portfolio's content.
+
+I have previously experimented with works that utilised a gif background for mobile viewports, but a full-scale 1080p video for PC browsers, though this seems excessive as previously expressed. Perhaps though, the gif background, or more specifically a similar effect of light animation in the way of emulating the effect of a CRT monitor could be worth investigating.
 
 ------------

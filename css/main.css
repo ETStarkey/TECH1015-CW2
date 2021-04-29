@@ -1,0 +1,121 @@
+/* == Standard Style Definitions == */
+a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 2px 2px 4px transparent;
+}
+body {
+	margin: 0;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	background-color: #101010;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	text-align: center;
+}
+button {
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	
+}
+hr {
+	margin: 1% 44%;
+	border-top: 2px solid #fff;
+}
+p {
+	font-family: 'VT323', monospace;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px #000;
+	margin: 0;
+}
+ul {
+	padding: 0;
+}
+
+/* == Classes == */
+/* These are classes that are assignable to elements in HTML
+   - that can be used to give special properties to some elements;
+   Applied using a "class" tag in HTML, a class uses a "." as a prefix
+   within a CSS document to indicate that it is a class. 
+   
+   W3Schools can helpfully accurately describe the difference between
+   this (a class) and an Id, and why classes can be useful to apply properties
+   and style across multiple elements:
+        "- The HTML class attribute is used to specify a class for an HTML element.
+        >> Multiple HTML elements can share the same class."
+
+    The key part being that multiple elements can share a class. */
+
+.item {
+	height: 360px;
+	width: 260px;
+	background-color: #000;
+	margin: 30px;
+	background-size: cover;
+	cursor: pointer;
+	display: inline-block;
+}
+/* .item is the crucial class that actually holds together a lot of the site
+    through how it applies a uniform height, width, and margin to elements
+    - when .item elements are stacked (with inlike-block specifically being
+    useful for a uniform performance across various viewports) they fall
+    in-line, like a grid, but act as individual containers that can adjust
+    fluidly to a changing viewport. */
+
+.item-text {
+	vertical-align: middle;
+	line-height: 360px;
+}
+/* .item-text spans to fill the same container as .item, but only applies
+    a vertical align for text to fit centrally in the small containers being
+    made by the .item class. */
+
+.title {
+	font-size: 4em;
+	margin: 50px;
+	margin-bottom: 5px;
+}
+.subtitle {
+	font-size: 2em;
+	margin-bottom: 50px;
+}
+/* both .title and .subtitle are self-explanatory classes to apply style to
+    the title and subtitle of the page, respectively - I've made this a class
+    to carry over the effect through the tab system I want to utilise later on */
+
+/* == Animations == */
+.grow {
+	transition: all .2s ease-in-out;
+}
+.grow:hover {
+	transform: scale(1.05);
+}
+/* Simple CSS transforming and transition animation: The class "grow:hover" 
+    means that, on mouse-hover, it will apply this transformation to whatever
+    element is assigned the "grow" class when it is hovered on by the mouse -
+    however, this transformation would be instant, with no transition to that
+    new, transformed shape. This is where the "transition" animation on the 
+    base .grow class will ensure that any transformation animations are done
+    smoothly and don't abruptly switch from one state to another. */
+
+/* Loader */
+.no-js #loader {
+	display: none;
+}
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../loader.gif) center no-repeat #fff;
+	background-color: #101010;
+}

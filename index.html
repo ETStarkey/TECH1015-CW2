@@ -2,27 +2,98 @@
 <title>Demiture | Portfolio</title>
 <head>
 	<!-- Website & Images hosted by Github. -->
-	<!-- All copyrights belong to their respective owners. Please don't sue 👀 -->
+	<!-- All copyrights belong to their respective owners as referenced. -->
 	<!-- Contact Email: P17206590@my365.dmu.ac.uk -->
 	<!-- Coded with VSCode | Tested using Firefox on Windows 10 -->
+
+	<!-- Our single, main CSS document -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	<!-- Reliable method to import usable fonts for your site from Google.
+		TO DO: Revisit which of these are needed, or what can be changed. -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+	<!-- Our (Currently non-existent) JavaScript document -->
 	<script src="js/script.js"></script>
+
+	<!-- Something I've carried over in my <head> tags as a standard,
+		 I'm aware of the usage of jquery to function as a small JS
+		 library that can help with generally keeping JS from being
+		 a headache, but I am not sure what the modernizr.js package is
+							!!! TO LOOK INTO !!! -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	
+	<!-- Site Metadeta (For SEO and embedded links) -->
 	<meta property="title" content="Demiture | Projects">
 	<meta name="description" content="A list of completed and/or in progress projects.">
 	<meta name="author" content="~Demi">
 	<meta charset='utf-8'>
+
+	<!-- Favicon Icon -->
 	<link href="../assets/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+	
+	<!-- Viewport - !! LOOK INTO !! -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+	// Loader - Lightweight and simple JS function to fade-out a //
+	// pre-defined layer ".se-pre-con" at z-index: 9999 (the top)//
+	// to uncover the page, after the page has fully loaded.     //
+	$(window).load(function() {
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
 <body>
-    
+	<!-- Loader div that covers the webpage contents until the 
+		script above will fade out this layer after site loading. -->
+	<div class="se-pre-con"></div>
+
+<!-- I think from this section, to the audio element, is where we
+	can experiment with trying to implement a dynamic tabbed system
+	to change what content is on the site, or more specically, what
+	elements are hidden or unhidden - though this could use more research. -->
+
+	<p class="title">Projects</p>
+	<p class="subtitle">Click to view project</p>
+
+	<!-- Fluid grid-like format, free from a table to fit changing
+		viewport sizes - See the .item class at line 50 in main.css
+		for more information on how this works.
+		
+		TODO: Alt text for images, bottom left of containers(?) -->
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/x.png)">
+			<p class="item-text">X</p>
+		</div>
+	</a>
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/y.png)">
+			<p class="item-text">Y</p>
+		</div>
+	</a>
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/z.png)">
+			<p class="item-text">Z</p>
+		</div>
+	</a>
+	<div class="item grow" style="background-image:url(img/)">
+		<p class="item-text">More very soon™</p>
+	</div>
+
+	<!-- Toying with the idea of background audio, to revisit. -->
+	<audio autoplay loop id="volumedown">
+		<source src="audio.mp3" type="audio/mpeg">
+	</audio> 
+	
+	<script>
+		// Audio Volume Script - Lightweight and on document to  //
+		// load with the page and apply a volume shift instantly.//
+		document.getElementById("volumedown").volume = 0.03;
+	</script>
 </body>
 </html>

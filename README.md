@@ -27,4 +27,27 @@ I want this site to be reflective of myself, the work I produce, and ideally a g
 
 I have previously experimented with works that utilised a gif background for mobile viewports, but a full-scale 1080p video for PC browsers, though this seems excessive as previously expressed. Perhaps though, the gif background, or more specifically a similar effect of light animation in the way of emulating the effect of a CRT monitor could be worth investigating.
 
+---
+
+**Testing the first commit**:
+------------
+
+Interestingly enough, while trying to get my first commit of the site up to have a skeleton to work with and build on, when I first loaded the GitHub page, nothing showed but a black screen.
+
+![Black screen faced after first commit](./img/readme-img/blankFirstCommit.png)
+
+This struck me as odd, so I used Firefox's troubleshooting skill to locate a silly but common error:
+
+![Blocked Content Error](./img/readme-img/BlockedContentError.png)
+
+It turns out that two scripts were being blocked by Firefox because the portfolio site would load HTTPS, while these script links were HTTP - no S.
+"Starting in Firefox 23, mixed active content is blocked by default."; this prevented the "Loader" script that would hide our .se-pre-con class cover for the site was not working as intended, and wouldn't reveal the site.
+
+![Small commit adding HTTPS links for scripts](./img/readme-img/HTTPSCommitFix.png)
+
+[After this small commit](https://github.com/ETStarkey/TECH1015-CW2/commit/f1cd13e86ad174b7d0e48af91d3695cf37418f2b), the problem has been resolved, and the script works as intended, revealing the site after a fast load.
+
+![State of fixed site on GitHub Pages](./img/readme-img/postFixSite.png)
+
+
 ------------

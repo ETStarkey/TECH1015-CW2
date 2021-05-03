@@ -34,7 +34,7 @@
 	<meta name="author" content="- E.Starkey">
 	<meta charset='utf-8'>
 
-	<!-- Favicon Icon -->
+	<!-- Favicon Icon - TO DO -->
 	<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
 	
 	<!-- Viewport - !! LOOK INTO !! -->
@@ -53,10 +53,46 @@
 		script above will fade out this layer after site loading. -->
 	<div class="se-pre-con"></div>
 
+	<!-- Tab links -->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'home')">Home</button>
+		<button class="tablinks" onclick="openTab(event, 'fineArt')">Fine Art</button>
+		<button class="tablinks" onclick="openTab(event, 'videoWork')">Video Work</button>
+		<button class="tablinks" onclick="openTab(event, 'contactMe')">Contact Me</button>
+	</div> 
+
 <!-- I think from this section, to the audio element, is where we
 	can experiment with trying to implement a dynamic tabbed system
 	to change what content is on the site, or more specically, what
 	elements are hidden or unhidden - though this could use more research. -->
+
+<div id="home" class="tabcontent">
+	<p class="title">Ethan "Demi" Starkey</p>
+	<p class="subtitle">E-Portfolio</p>
+
+	<!-- Fluid grid-like format, free from a table to fit changing
+		viewport sizes - See the .item class at line 50 in main.css
+		for more information on how this works.
+		
+		TODO: Alt text for images, bottom left of containers(?) -->
+		<a href=# onclick="openTab(event, 'fineArt')">
+			<div class="item grow" style="background-image:url(img/x.png)">
+				<p class="item-text">Fine Art</p>
+			</div>
+		</a>
+		<a href=# onclick="openTab(event, 'videoWork')">
+			<div class="item grow" style="background-image:url(img/y.png)">
+				<p class="item-text">Video Work</p>
+			</div>
+		</a>
+		<a href=# onclick="openTab(event, 'contactMe')">
+			<div class="item grow" style="background-image:url(img/z.png)">
+				<p class="item-text">Contact Me</p>
+			</div>
+		</a>
+</div>
+
+<div id="fineArt" class="tabcontent">
 
 	<p class="title">Projects</p>
 	<p class="subtitle">Click to view project</p>
@@ -85,6 +121,16 @@
 		<p class="item-text">More very soon™</p>
 	</div>
 
+</div>
+
+<div id="videoWork" class="tabcontent">
+
+</div>
+
+<div id="contactMe" class="tabcontent">
+
+</div>
+
 	<!-- Toying with the idea of background audio, to revisit. -->
 	<audio autoplay loop id="volumedown">
 		<source src="audio.mp3" type="audio/mpeg">
@@ -94,6 +140,21 @@
 		// Audio Volume Script - Lightweight and on document to  //
 		// load with the page and apply a volume shift instantly.//
 		document.getElementById("volumedown").volume = 0.03;
+	</script>
+	<script>
+		function openTab(evt, tabName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(tabName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
 	</script>
 </body>
 </html>

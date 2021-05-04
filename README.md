@@ -142,3 +142,9 @@ The final section is what shows the content sections, by using the parameter cal
 As the site is a portfolio site, naturally it would be a useful feature for users to be able to select out a piece of content to look closer at, perhaps even get the full-scale image to download (we can use a direct link to the image/video to do this).
 
 I believe this should be achievable by using a JavaScript function to essentially pull whatever content is selected to be in an element on a higher `z-index`, that is then unhidden to span the screen, and dim out the rest of the site using a high opacity background on this element. We would need to make sure there is an intuitive method of coming out of this view, probably clicking anywhere on the dimmed background outside of the media element being showcased (to allow video controls).
+
+To begin with, I need to render a couple of assests to be used for the thumbnails that will applied as the background the fluid-grid containers. For the videos page, a .gif rendered from the videos (or thumbnail) to the absolute size of the `.item` class should work well at a low resolution. For images, I think it'd be easier to simply run these images through photoshop on a template that is the size of the `.item` class again - This should lower the size of the files being loaded and displayed when the site loads initially.
+
+![Rendering .gif thumbnails](./img/readme-img/renderingGifThumbnails.png)
+
+**Above**: *The rendering settings for all the gifs I produced for video thumbnails.*

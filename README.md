@@ -1,5 +1,5 @@
 # TECH1015-CW2
-TECH1015-CW2 Submission
+TECH1015 CW2 Submission - Ethan Taylor Starkey [P17206590]
 
 # **Contents**:
 
@@ -9,6 +9,7 @@ TECH1015-CW2 Submission
 * [3.1 // Adding a tabbed content framework](#Adding-a-tabbed-content-framework)
   * [3.2 // First issues with the tab system ](#First-issues-with-tab-system)
   * [3.3 // Diving into the tab JavaScript](#Diving-into-the-tab-JavaScript)
+* [4.1 // Enlarging content for viewing](#Enlarging-content-for-viewing)
 
 # **Title**: Portfolio Webpage
 
@@ -136,4 +137,8 @@ The second section gathers all elements with the class: `tablinks` and removes t
 ```
 The final section is what shows the content sections, by using the parameter called with the function: `tabName`, which is unique to each button on the navbar to hide all other elements that are tagged as `tabcontent` *with the exception* of the `tabcontent` associated to the `tabName` button that called the function, which has the display style applied to it to reveal it, and the active tag on the button to apply the `active` CSS to show the user which page they are on through the navbar.
 
-------------
+# **Enlarging-content-for-viewing**:
+
+As the site is a portfolio site, naturally it would be a useful feature for users to be able to select out a piece of content to look closer at, perhaps even get the full-scale image to download (we can use a direct link to the image/video to do this).
+
+I believe this should be achievable by using a JavaScript function to essentially pull whatever content is selected to be in an element on a higher `z-index`, that is then unhidden to span the screen, and dim out the rest of the site using a high opacity background on this element. We would need to make sure there is an intuitive method of coming out of this view, probably clicking anywhere on the dimmed background outside of the media element being showcased (to allow video controls).

@@ -45,11 +45,11 @@ I have previously experimented with works that utilised a gif background for mob
 
 Interestingly enough, while trying to get my first commit of the site up to have a skeleton to work with and build on, when I first loaded the GitHub page, nothing showed but a black screen.
 
-![Black screen faced after first commit](./img/readme-img/blankFirstCommit.png)
+![Black screen after first commit](./img/readme-img/blankFirstCommit.png)
 
 This struck me as odd, so I used Firefox's troubleshooting skill to locate a silly but common error:
 
-![Blocked Content Error](./img/readme-img/BlockedContentError.png)
+!['Blocked Content Error'](./img/readme-img/BlockedContentError.png)
 
 It turns out that two scripts were being blocked by Firefox because the portfolio site would load HTTPS, while these script links were HTTP - not HTTPS.
 `"Starting in Firefox 23, mixed active content is blocked by default."`; this prevented the "Loader" script that would hide our .se-pre-con class cover for the site was not working as intended, and wouldn't reveal the site.

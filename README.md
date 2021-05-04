@@ -10,6 +10,8 @@ TECH1015 CW2 Submission - Ethan Taylor Starkey [P17206590]
   * [3.2 // First issues with the tab system ](#First-issues-with-tab-system)
   * [3.3 // Diving into the tab JavaScript](#Diving-into-the-tab-JavaScript)
 * [4.1 // Enlarging content for viewing](#Enlarging-content-for-viewing)
+  * [4.2 // Thumbnail rendering](#Thumbnail-rendering)
+  * [4.3 // Reviewing how to showcase content](#Reviewing-how-to-showcase-content)
 
 # **Title**: Portfolio Webpage
 
@@ -143,8 +145,52 @@ As the site is a portfolio site, naturally it would be a useful feature for user
 
 I believe this should be achievable by using a JavaScript function to essentially pull whatever content is selected to be in an element on a higher `z-index`, that is then unhidden to span the screen, and dim out the rest of the site using a high opacity background on this element. We would need to make sure there is an intuitive method of coming out of this view, probably clicking anywhere on the dimmed background outside of the media element being showcased (to allow video controls).
 
+## **Thumbnail-rendering**:
+
 To begin with, I need to render a couple of assests to be used for the thumbnails that will applied as the background the fluid-grid containers. For the videos page, a .gif rendered from the videos (or thumbnail) to the absolute size of the `.item` class should work well at a low resolution. For images, I think it'd be easier to simply run these images through photoshop on a template that is the size of the `.item` class again - This should lower the size of the files being loaded and displayed when the site loads initially.
 
 ![Rendering .gif thumbnails](./img/readme-img/renderingGifThumbnails.png)
 
 **Above**: *The rendering settings for all the gifs I produced for video thumbnails.*
+
+**Below**: *The export settings for all the image thumbnails, I scaled this up as it looked a lot worse than the gifs at a lower resolution, so I doubled the resolution up to 520x720px.*
+
+![Rendering .png thumbnails](./img/readme-img/renderingPngThumbnails.png)
+
+## **Reviewing-how-to-showcase-content**:
+
+Upon a little bit of experimenting, I've come to see that it would be quite difficult to try and add this functionality, though it is possible with JavaScript, possibly in a similar way to the tab system, I think that having everything attached to being hidden, and made visible by a script is bloated enough in my opinion. It is also hard to efficiently do this in a script, at least with the framework I've given myself - I had hoped that there would be a way to do this via. CSS animations/transitions, but the closest to what we want is a `:hover` class (which we already have) or an `:active` class, but that is more effective with a checkbox (As I found here: https://stackoverflow.com/questions/39858998/zoom-in-and-out-on-mouse-click-with-css)
+
+My initial idea was to use:
+```css
+.showcase:active {
+		z-index: 100;
+		height: 50%;
+		width: 25%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+```
+Applied either directly to the thumbnail element like so:
+```html
+<a href=#>
+		<div class="item grow showcase" style="background-image:url(img/imgThumb/thumb-WindowScreenprint.png)">
+			<p class="item-text">Window Screenprint</p>
+		</div>
+	</a>
+```
+Or applied to a checkbox to have a constant `:active` state, but the checkbox stays small and difficult for users to interact with.
+
+Even after this, this will only enlarge the thumbnail assest element, not the full piece that the user wants to see - I think there are methods overcome this issue, again either with more JavaScript, but I think the idea of `@media` in CSS and dynamic adjustment could solve this, but I am not extremely well versed in this so it would be out of my expertise to pursue this idea.
+
+![Something](./img/readme-img/hrefReferenceImage.png)
+
+**Above**: *A link placeholder that's been directing to nowhere on each thumbnail element - This can be used to easily add navigation to content individually.*
+
+Fortunately, this issues doesn't need to hold me up for too long, as I had prepared in advance for these features to possibly not come to fruition. Using the `<a href=#>` tags left around each thumbnail, we just need to decide if direct linking to content would be preferable to possibly making multiple 'husk' pages that feature the navigation bar to redirect back around the site, but are almost identical minus the content difference.
+
+I'm hoping that sharing the same `main.css` and cached assests (fonts, for example) for any page could negate any reloading/refreshing of a downloaded assest, and minimise load times between pages.
+
+---
+
+TO REVIEW:
+

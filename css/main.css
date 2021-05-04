@@ -71,6 +71,8 @@ ul {
     a vertical align for text to fit centrally in the small containers being
     made by the .item class. */
 
+
+
 .title {
 	font-size: 4em;
 	margin: 50px;
@@ -120,7 +122,6 @@ ul {
 	border-top: none;
   } 
 
-
 /* == Animations == */
 .grow {
 	transition: all .2s ease-in-out;
@@ -135,6 +136,16 @@ ul {
     new, transformed shape. This is where the "transition" animation on the 
     base .grow class will ensure that any transformation animations are done
     smoothly and don't abruptly switch from one state to another. */
+
+.tabcontent {
+	animation: fadeEffect 1s; /* 1 second fading effect for tabs */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
 
 /* Loader */
 .no-js #loader {

@@ -66,7 +66,7 @@
 	to change what content is on the site, or more specically, what
 	elements are hidden or unhidden - though this could use more research. -->
 
-<div id="home" class="tabcontent">
+<div id="home" class="tabcontent active" style="display: block;">
 	<p class="title">Ethan "Demi" Starkey</p>
 	<p class="subtitle">E-Portfolio</p>
 
@@ -93,15 +93,15 @@
 </div>
 
 <div id="fineArt" class="tabcontent">
-
-	<p class="title">Projects</p>
+	<p class="title">Fine Art Projects</p>
 	<p class="subtitle">Click to view project</p>
 
 	<!-- Fluid grid-like format, free from a table to fit changing
 		viewport sizes - See the .item class at line 50 in main.css
 		for more information on how this works.
 		
-		TODO: Alt text for images, bottom left of containers(?) -->
+		TODO: 	- Alt text for images, bottom left of containers(?)
+				- JS for expanding content from selection -->				
 	<a href=#>
 		<div class="item grow" style="background-image:url(img/x.png)">
 			<p class="item-text">X</p>
@@ -120,11 +120,30 @@
 	<div class="item grow" style="background-image:url(img/)">
 		<p class="item-text">More very soon™</p>
 	</div>
-
 </div>
 
-<div id="videoWork" class="tabcontent">
-
+<div id="videoWork" class="tabcontent">	
+	<p class="title">Video Projects</p>
+	<p class="subtitle">Click to view project</p>
+				
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/x.png)">
+			<p class="item-text">X</p>
+		</div>
+	</a>
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/y.png)">
+			<p class="item-text">Y</p>
+		</div>
+	</a>
+	<a href=#>
+		<div class="item grow" style="background-image:url(img/z.png)">
+			<p class="item-text">Z</p>
+		</div>
+	</a>
+	<div class="item grow" style="background-image:url(img/)">
+		<p class="item-text">More very soon™</p>
+	</div>
 </div>
 
 <div id="contactMe" class="tabcontent">
@@ -134,8 +153,7 @@
 	<!-- Toying with the idea of background audio, to revisit. -->
 	<audio autoplay loop id="volumedown">
 		<source src="audio.mp3" type="audio/mpeg">
-	</audio> 
-	
+	</audio> 	
 	<script>
 		// Audio Volume Script - Lightweight and on document to  //
 		// load with the page and apply a volume shift instantly.//

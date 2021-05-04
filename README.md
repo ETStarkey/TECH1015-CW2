@@ -13,6 +13,7 @@ TECH1015 CW2 Submission - Ethan Taylor Starkey [P17206590]
   * [4.2 // Thumbnail rendering](#Thumbnail-rendering)
   * [4.3 // Reviewing how to showcase content](#Reviewing-how-to-showcase-content)
   * [4.4 // Further investigation on JS showcase](#Further-investigation-on-JS-showcase)
+* [5.1 // Testing load speeds](#Testing-load-speeds)
 
 # **Title**: Portfolio Webpage
 
@@ -191,7 +192,7 @@ Fortunately, this issues doesn't need to hold me up for too long, as I had prepa
 
 I'm hoping that sharing the same `main.css` and cached assests (fonts, for example) for any page could negate any reloading/refreshing of a downloaded assest, and minimise load times between pages.
 
-## Further-investigation-on-JS-showcase
+## **Further-investigation-on-JS-showcase**:
 
 HTML video player section, hidden by default:
 ```html
@@ -237,5 +238,13 @@ I was hoping that I could utilise JavaScript and smart naming systems to change 
 
 ![F12 console error outputs](./img/readme-img/JSCross-OriginError.png)
 
----
+# **Testing-load-speeds**:
 
+Just to ensure that my site is lightweight and loads fast, on mobile and PC, I will be checking the Firefox developer tools to measure if there is any clear delay in loading the site, but across the board, even limiting speeds to `Regular 3G speeds` sees little-to-no-decrease in the load speed even without cache.
+
+![General site testing environment](./img/readme-img/testingLoadSpeeds.png)
+**Above**: *Firefox web developer tools, there are tons of tools here for a depth of web applications, but the one we're mainly focused on is the performance tab, that let's us know whenever the browser is having to work to load or calculate something.*
+
+
+
+---

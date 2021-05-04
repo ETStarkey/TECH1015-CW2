@@ -17,16 +17,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
-	<!-- Our (Currently non-existent) JavaScript document -->
-	<script src="js/script.js"></script>
-
 	<!-- Something I've carried over in my <head> tags as a standard,
 		 I'm aware of the usage of jquery to function as a small JS
 		 library that can help with generally keeping JS from being
 		 a headache, but I am not sure what the modernizr.js package is
 							!!! TO LOOK INTO !!! -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	
 	<!-- Site Metadeta (For SEO and embedded links) -->
 	<meta property="title" content="Ethan 'Demi' Starkey | Projects">
@@ -34,10 +30,10 @@
 	<meta name="author" content="- E.Starkey">
 	<meta charset='utf-8'>
 
-	<!-- Favicon Icon - TO DO -->
-	<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+	<!-- Favicon Icon -->
+	<link href="./img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
 	
-	<!-- Viewport - !! LOOK INTO !! -->
+	<!-- Viewport metadata -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <script>
@@ -71,17 +67,17 @@
 	<p class="subtitle">E-Portfolio</p>
 
 		<a href=# onclick="openTab(event, 'fineArt')">
-			<div class="item grow" style="background-image:url(img/x.png)">
+			<div class="item grow" style="background-image:url(img/videoThumb/fineArtThumb.gif)">
 				<p class="item-text">Fine Art</p>
 			</div>
 		</a>
 		<a href=# onclick="openTab(event, 'videoWork')">
-			<div class="item grow" style="background-image:url(img/y.png)">
+			<div class="item grow" style="background-image:url(img/videoThumb/videoMashupThumb.gif)">
 				<p class="item-text">Video Work</p>
 			</div>
 		</a>
 		<a href=# onclick="openTab(event, 'contactMe')">
-			<div class="item grow" style="background-image:url(img/z.png)">
+			<div class="item grow" style="background-image:url(img/)">
 				<p class="item-text">Contact Me</p>
 			</div>
 		</a>
@@ -95,21 +91,35 @@
 		viewport sizes - See the .item class at line 50 in main.css
 		for more information on how this works.
 		
-		TODO: 	- Alt text for images, bottom left of containers(?)
-				- JS for expanding content from selection -->				
-	<a href=#>
-		<div class="item grow showcase" style="background-image:url(img/imgThumb/thumb-WindowScreenprint.png)">
+		TODO: 	- Alt text for images, bottom left of containers(?) -->			
+	<a href="./img/fineArt/fineArt-WindowScreenprint.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-WindowScreenprint.png)">
 			<p class="item-text">Window Screenprint</p>
 		</div>
 	</a>
-	<a href=#>
-		<div class="item grow showcase" style="background-image:url(img/imgThumb/thumb-ColourfulScreenprint.png)">
+	<a href="./img/fineArt/fineArt-ColourfulScreenprint.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-ColourfulScreenprint.png)">
 			<p class="item-text">Colourful Screenprint</p>
 		</div>
 	</a>
-	<a href=#>
-		<div class="item grow showcase" style="background-image:url(img/imgThumb/thumb-FigureStudy.png)">
+	<a href="./img/fineArt/fineArt-FigureStudy.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-FigureStudy.png)">
 			<p class="item-text">Figure Study</p>
+		</div>
+	</a>
+	<a href="./img/fineArt/fineArt-DestinyStudy.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-DestinyStudy.png)">
+			<p class="item-text">Destiny Study</p>
+		</div>
+	</a>
+	<a href="./img/fineArt/fineArt-OpenDoorMixedMedia.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-OpenDoorMixedMedia.png)">
+			<p class="item-text">Doorway</p>
+		</div>
+	</a>
+	<a href="./img/fineArt/fineArt-ThinkSketch.jpg" target="_blank">
+		<div class="item grow" style="background-image:url(img/imgThumb/thumb-ThinkSketch.png)">
+			<p class="item-text">Thinking Sketch</p>
 		</div>
 	</a>
 	<div class="item grow" style="background-image:url(img/)">
@@ -121,28 +131,36 @@
 	<p class="title">Video Projects</p>
 	<p class="subtitle">Click to view project</p>
 				
-	<a href=#>
-		<div id="vid-hobbyGameEdit" class="item grow" style="background-image:url(img/videoThumb/personalGamingEditWIP.gif)">
+	<a href="./video/vid-hobbyGameEdit.mp4" target="_blank">
+		<div class="item grow" style="background-image:url(img/videoThumb/personalGamingEditWIP.gif)">
 			<p class="item-text">[Hobby] Gaming Edit</p>
 		</div>
 	</a>
-	<a href=#>
-		<div id="vid-rustEntityCamera" class="item grow" style="background-image:url(img/videoThumb/rustEntityCameraExperiment.gif)">
+	<a href="./video/vid-rustEntityCamera.mp4" target="_blank">
+		<div class="item grow" style="background-image:url(img/videoThumb/rustEntityCameraExperiment.gif)">
 			<p class="item-text">Experimenting With Rust</p>
 		</div>
 	</a>
-	<a href=#>
-		<div id="vid-osuMapSpotlight" class="item grow" style="background-image:url(img/videoThumb/osuMapSpotlightThumb.gif)">
+	<a href="https://youtube.com/watch?v=qxGXvR9wWVM" target="_blank">
+		<div class="item grow" style="background-image:url(img/videoThumb/osuMapSpotlightThumb.gif)">
 			<p class="item-text">Osu! Map Showcase</p>
 		</div>
 	</a>
 	<div class="item grow" style="background-image:url(img/)">
 		<p class="item-text">More very soon™</p>
 	</div>
+
 </div>
 
 <div id="contactMe" class="tabcontent">
-
+	<p class="title">Contact Me</p>
+	<p class="subtitle">See below, my contact details:</p>
+<br />
+	<p class="contact">Email: P17206590@my365.dmu.ac.uk</p>
+	<p class="contact">Discord: Demiture#8114</p>
+	<a href="https://www.linkedin.com/in/ethan-starkey/" target="_blank">
+		<p class="contact link">LinkedIn: www.linkedin.com/in/ethan-starkey</p>
+	</a>
 </div>
 
 	<!-- Toying with the idea of background audio, to revisit. -->

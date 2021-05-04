@@ -86,6 +86,16 @@ ul {
     the title and subtitle of the page, respectively - I've made this a class
     to carry over the effect through the tab system I want to utilise later on */
 
+.contact {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	align-self: center;
+}
+
+.link:hover {
+	background-color: rgb(25, 255, 4);
+	max-width: 100%;
+}
 
 /* Style the tab */
 .tab {

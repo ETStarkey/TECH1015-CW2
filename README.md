@@ -12,6 +12,7 @@ TECH1015 CW2 Submission - Ethan Taylor Starkey [P17206590]
 * [4.1 // Enlarging content for viewing](#Enlarging-content-for-viewing)
   * [4.2 // Thumbnail rendering](#Thumbnail-rendering)
   * [4.3 // Reviewing how to showcase content](#Reviewing-how-to-showcase-content)
+  * [4.4 // Further investigation on JS showcase](#Further-investigation-on-JS-showcase)
 
 # **Title**: Portfolio Webpage
 
@@ -182,7 +183,7 @@ Or applied to a checkbox to have a constant `:active` state, but the checkbox st
 
 Even after this, this will only enlarge the thumbnail assest element, not the full piece that the user wants to see - I think there are methods overcome this issue, again either with more JavaScript, but I think the idea of `@media` in CSS and dynamic adjustment could solve this, but I am not extremely well versed in this so it would be out of my expertise to pursue this idea.
 
-![Something](./img/readme-img/hrefReferenceImage.png)
+![<a href=#> highlighted](./img/readme-img/hrefReferenceImage.png)
 
 **Above**: *A link placeholder that's been directing to nowhere on each thumbnail element - This can be used to easily add navigation to content individually.*
 
@@ -190,7 +191,51 @@ Fortunately, this issues doesn't need to hold me up for too long, as I had prepa
 
 I'm hoping that sharing the same `main.css` and cached assests (fonts, for example) for any page could negate any reloading/refreshing of a downloaded assest, and minimise load times between pages.
 
----
+## Further-investigation-on-JS-showcase
 
-TO REVIEW:
+HTML video player section, hidden by default:
+```html
+<div id="videoPlayerDiv">
+    <video id="videoPlayer" width="560" height="315" src="#" style="display: none"/>
+    <iframe id="ytPlayer" width="560" height="315" src="https://www.youtube.com/embed/qxGXvR9wWVM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+```
+and using:
+```html
+<a onClick="videoSelection('vid-hobbyGameEdit')" href=#>
+```
+for videos stored on the webserver, and:
+```html
+<a onClick="videoSelection('yt_qxGXvR9wWVM')" href=#>
+```
+for the embed link, for a YouTube video (videos too large to be hosted on the GitHub webserver).
+
+And for the JavaScript itself, we used:
+```js
+<script>
+    function videoSelection(videoName) {
+        var yt, ytLink, embedLink;
+        yt = videoName.startsWith("yt_");
+
+        if(yt = true){
+            ytLink = videoName.substr(3);
+            embedLink = "https://www.youtube.com/embed/";
+            embedLink = embedLink.concat(ytLink);
+            document.getElementById("ytPlayer").src = embedLink;
+            document.getElementById("ytPlayer").style = "display: block";
+            document.getElementById("videoPlayer").style = "display: none";
+        } else {
+            embedLink = videoName.concat(".mp4");
+            document.getElementById("videoPlayer").src = embedLink;
+            document.getElementById("videoPlayer").style = "display: block";
+            document.getElementById("ytPlayer").style = "display: none";
+        }
+    }
+</script>
+```
+I was hoping that I could utilise JavaScript and smart naming systems to change the sources of media elements on the site dynamically, but this attempt has been unsuccessful due to errors surrounding cookies and "SameSite" attributes.
+
+![F12 console error outputs](./img/readme-img/JSCross-OriginError.png)
+
+---
 
